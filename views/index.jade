@@ -1,0 +1,48 @@
+doctype html
+html
+ head
+  link(rel="stylesheet" href="css/style.css")
+ body
+  center
+    block titulo
+     h1= title
+    block content
+      .forma
+        Form#forma(action="/" method="post")
+           table
+            tr
+             th
+              label nombre
+             td
+              input(type='text' name='nombre')
+            tr
+             th 
+              label apellido
+             td
+              input(type='text' name='apellido')
+            tr
+             th
+              label age
+             td    
+              input(type='number' name='edad')
+            tr
+            th
+              label email
+             td    
+              input(type='email' name='email')
+            tr
+              td 
+              td
+               input(type='submit')
+           span.validacion=validacion
+      .tabla
+        each persona ,index in personas
+          li
+           h3=persona.nombre 
+           input(type='checkbox' style='display:inline;')
+           ul.persona
+            li= persona.apellido
+            li= persona.email
+      input#boton(type="button" value="press"  onclick="cambiacolor(this)")
+    script(src="js/js.js")
+      

@@ -1,0 +1,11 @@
+body {
+  color: #6f2d2d;
+}
+main {
+  margin: 10px auto;
+}
+.validacion {
+  border-radius: 2px;
+  border: 1px solid #000;
+  background-color: #eef;
+}
