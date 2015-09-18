@@ -9,11 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "body-parser": "^1.13.3",
     "mongodb": "^2.0.42",
-    "stylus": "^0.52.4",
-    "nib": "^1.1.0"
+    "mongoose": "^4.1.7",
+    "nib": "^1.1.0",
+    "stylus": "^0.52.4"
   }
 }
