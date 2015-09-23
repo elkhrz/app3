@@ -1,6 +1,6 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
-    home = require('./home'),
+    home = require('./routes/index'),
     usuario = require('./models/usuario'),
     router = express.Router(),
     stylus = require('stylus'),
@@ -40,9 +40,9 @@ app.use(stylus.middleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.post('/',function(req,res){
-    var nombre = req.body.nombre;
-        edad   = req.body.edad;
-        apellido = req.body.apellido;
+    var nombre = req.body.nombre,
+        edad   = req.body.edad,
+        apellido = req.body.apellido,
         email = req.body.email;
     
     if (edad !=='' && nombre !== '' && email !== ''){
@@ -63,5 +63,5 @@ app.post('/',function(req,res){
     
 })
 
-app.listen(3000);
-console.log('Example app listening at 3000');
+app.listen(process.env.PORT);
+console.log('Example app listening at '+process.env.PORT);
